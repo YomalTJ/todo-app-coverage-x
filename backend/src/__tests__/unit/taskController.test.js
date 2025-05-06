@@ -1,6 +1,14 @@
 const taskController = require("../../controllers/taskController");
 const db = require("../../db");
 
+const originalConsoleError = console.error;
+beforeAll(() => {
+  console.error = jest.fn();
+});
+afterAll(() => {
+  console.error = originalConsoleError;
+});
+
 // Mock the database module
 jest.mock("../../db", () => ({
   query: jest.fn(),
