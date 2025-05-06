@@ -44,3 +44,49 @@ docker compose up --build
 - `GET /api/tasks` - Get all tasks
 - `POST /api/tasks` - Create a new task
 - `PUT /api/tasks/:id/complete` - Mark a task as complete
+
+
+Testing
+Backend Testing
+The backend uses Jest for unit and integration testing.
+Running Backend Tests
+bashcd backend
+npm test
+Backend Test Coverage
+To run tests with coverage report:
+bashcd backend
+npm run test:coverage
+This will generate a coverage report in the coverage directory.
+Backend Test Structure
+
+Unit Tests: Test individual controller functions in isolation
+
+Located in src/__tests__/unit
+Mock database interactions
+
+
+Integration Tests: Test API endpoints through HTTP requests
+
+Located in src/__tests__/integration
+Use supertest to simulate HTTP requests
+
+
+
+Frontend Testing
+Running Frontend Tests
+bashcd frontend
+npm test
+Frontend Test Coverage
+To run tests with coverage report:
+bashcd frontend
+npm run test:coverage
+Frontend Test Structure
+
+Unit Tests: Test individual components in isolation
+
+Located in src/__tests__/unit
+
+
+Integration Tests: Test component interactions
+
+Located in src/__tests__/integration
