@@ -24,7 +24,14 @@ A full-stack Todo application with React frontend, Express backend, and PostgreS
 ### Steps to Run
 
 1. Clone the repository
-2. From the project root directory, run:
+2. > 💡 Make sure to install Node.js dependencies for both `backend` and `frontend` folders if you're running the project outside Docker:
+> 
+> ```bash
+> cd backend && npm install
+> cd ../frontend && npm install
+> ```
+
+3. From the project root directory, run:
 
 ```bash
 docker compose up --build
